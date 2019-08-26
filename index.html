@@ -17,13 +17,17 @@
     <script type="text/babel">
       const Fruit = ({ name }) => <h1>{name}</h1>;
 
-      const App = () => (
-        <div>
-          <Fruit name="Apple" />
-          <Fruit name="Banana" />
-          <Fruit name="Cherry" />
-        </div>
-      );
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <Fruit name="Apple" />
+              <Fruit name="Banana" />
+              <Fruit name="Cherry" />
+            </div>
+          );
+        }
+      }
 
       ReactDOM.render(<App />, document.getElementById("root"));
     </script>
