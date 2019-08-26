@@ -5,7 +5,14 @@
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
     <title>Learning React</title>
   </head>
+
   <body>
     <div id="root"></div>
+    <script type="text/javascript">
+      ReactDOM.render(
+        React.createElement("h1", { style: { color: "red" } }, "Hello World!"),
+        document.getElementById("root")
+      );
+    </script>
   </body>
 </html>
