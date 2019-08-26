@@ -15,15 +15,19 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const Hello = () => {
+      const Hello = props => {
         return (
           <div className="heading">
-            <h1>Hello React!</h1>
+            <h1>Hello {props.library}!</h1>
+            <p>{props.message}</p>
           </div>
         );
       };
 
-      ReactDOM.render(<Hello />, document.getElementById("root"));
+      ReactDOM.render(
+        <Hello library="React" message="Enjoy" />,
+        document.getElementById("root")
+      );
     </script>
   </body>
 </html>
