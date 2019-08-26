@@ -15,14 +15,20 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const gameList = ["Basketball", "Soccer", "Golf", "VolleyBall"];
+      const gameList = [
+        { id: 1, name: "Basketball", personality: "Michael Jordan" },
+        { id: 2, name: "Billiard", personality: "Efren Reyes" },
+        { id: 3, name: "Golf", personality: "Tiger Woods" }
+      ];
 
       const App = ({ games }) => (
-        <div>
-          {games.map((game, id) => (
-            <li key={id}>{game}</li>
+        <ul>
+          {games.map(game => (
+            <li key={game.id}>
+              {game.name} ({game.personality})
+            </li>
           ))}
-        </div>
+        </ul>
       );
       ReactDOM.render(
         <App games={gameList} />,
