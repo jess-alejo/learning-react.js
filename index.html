@@ -15,19 +15,17 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const Hello = props => {
-        return (
-          <div className="heading">
-            <h1>Hello {props.library}!</h1>
-            <p>{props.message}</p>
-          </div>
-        );
-      };
+      const Fruit = ({ name }) => <h1>{name}</h1>;
 
-      ReactDOM.render(
-        <Hello library="React" message="Enjoy" />,
-        document.getElementById("root")
+      const App = () => (
+        <div>
+          <Fruit name="Apple" />
+          <Fruit name="Banana" />
+          <Fruit name="Cherry" />
+        </div>
       );
+
+      ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>
 </html>
