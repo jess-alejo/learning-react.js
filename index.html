@@ -18,9 +18,17 @@
       const Fruit = ({ name }) => <h1>{name}</h1>;
 
       class App extends React.Component {
+        state = {
+          loggedIn: true
+        };
+
         render() {
           return (
             <div>
+              <div>
+                The user is{" "}
+                {this.state.loggedIn ? "logged in" : "not logged in"}.
+              </div>
               <Fruit name="Apple" />
               <Fruit name="Banana" />
               <Fruit name="Cherry" />
