@@ -15,11 +15,15 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      let city = "Rio";
-      ReactDOM.render(
-        <h1 className="heading">Hello {city}!</h1>,
-        document.getElementById("root")
-      );
+      const Hello = () => {
+        return (
+          <div className="heading">
+            <h1>Hello React!</h1>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<Hello />, document.getElementById("root"));
     </script>
   </body>
 </html>
