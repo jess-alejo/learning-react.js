@@ -15,20 +15,19 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const IndoorGame = ({ name }) => <h1>{name}</h1>;
-      const OutdoorGame = ({ name }) => <h1>{name}</h1>;
+      const gameList = ["Basketball", "Soccer", "Golf", "VolleyBall"];
 
-      const App = ({ raining }) => (
+      const App = ({ games }) => (
         <div>
-          {raining ? (
-            <IndoorGame name="Table Tennis" />
-          ) : (
-            <OutdoorGame name="Golf" />
-          )}
+          {games.map((game, id) => (
+            <li key={id}>{game}</li>
+          ))}
         </div>
       );
-
-      ReactDOM.render(<App raining={false} />, document.getElementById("root"));
+      ReactDOM.render(
+        <App games={gameList} />,
+        document.getElementById("root")
+      );
     </script>
   </body>
 </html>
